@@ -1,11 +1,7 @@
-<%= stylesheet_link_tag "event_index.css" %>
-
-<div class="page_title">Welcome! Choose an event of your liking or create one!</div>
-
-<%=@events.each do |event|%>
+<%current_user.events.each do |event|%>
     <div class="event_box">
         <div class="event_name"><h2><%=event.name%></h2></div>
         <div class="event_location"><h4><%=event.location%></h4></div>
         <div class="event_date"><h5><%=event.date%></h5></div>
     </div>
-<%end%>
+<% end %>
