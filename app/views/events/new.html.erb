@@ -1,0 +1,22 @@
+<div class="event_title">Create a New Event!</div>
+
+<%=form_with model: @event do |event_part|%>
+    <div class="event_date">
+        <%=event_part.label :date%>
+        <%=event_part.text_field :date%>
+    </div>
+
+    <div class="event_name">
+        <%=event_part.label :name, 'Description'%>
+        <%=event_part.text_field :name%>
+    </div>
+
+    <div class="event_location">
+        <%=event_part.label :location%>
+        <%=event_part.text_field :location%>
+    </div>
+
+    <div class="event_submit">
+        <%=event_part.submit "Create Event"%>
+    </div>
+<%end%>

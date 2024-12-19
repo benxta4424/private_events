@@ -9,3 +9,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
 }
+.all_events{
+    border: 2px solid red;
+}
