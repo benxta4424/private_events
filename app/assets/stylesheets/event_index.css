@@ -6,9 +6,17 @@
 }
 .event_box {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    grid-template-rows: repeat(3, 1fr);
+    max-height: 25vh;
+    max-width: 15vw;
+    border: 3px solid green;
+    text-align: center;
+    font-size: max(10%, 1.5vh);
 }
 .all_events{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     border: 2px solid red;
+    padding: 40px;
+    margin-top: 2%;
 }
