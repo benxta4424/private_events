@@ -1,0 +1,12 @@
+.users_show_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 40px;
+    margin-top: 2%;
+}
+.user_show_title {
+    font-size:2rem;
+    font-weight: bold;
+    margin-top:2rem;
+    text-align: center;
+}

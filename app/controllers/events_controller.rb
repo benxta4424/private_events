@@ -17,6 +17,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @event=Event.find(params[:id])
+  end
+
   private
   def event_params
     params.require(:event).permit(:date, :name, :location)

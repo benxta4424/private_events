@@ -30,6 +30,11 @@
                 <div class="event_name"><h2>Description:<%=event.name%></h2></div>
                 <div class="event_location"><h4>Location:<%=event.location%></h4></div>
                 <div class="event_date"><h5>Date:<%=event.date%></h5></div>
+                
+                <%# if the user is signed in,he/she can attend an event %>
+                <% if user_signed_in?%>
+                    <div class="attend_event"><%=link_to 'Attend Event',event_path(event)%></div>
+                <%end%> 
             </div>
         <%end%>
     </div>
