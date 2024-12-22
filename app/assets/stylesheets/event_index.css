@@ -7,12 +7,14 @@
 .event_box {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    padding: 20px;
     max-height: 25vh;
     max-width: 15vw;
     row-gap: 5px;
     border: 3px solid green;
     text-align: center;
     font-size: max(10%, 1.5vh);
+    border-radius: 20px;
 }
 .all_events{
     display: grid;
