@@ -2,3 +2,12 @@
 <h3>Description of the event:<%=@event.name%></h3>
 <h4>Location of the event:<%=@event.location%></h4>
 <h5>Event date:<%=@event.date%></h5>
+<h6>Atendees:
+    <ul>
+        <li>Robert</li>
+        <li>Andrei</li>
+        <li>Emanuel</li>
+    </ul>
+</h6>
+
+<%= link_to "Attend This Event",new_attendance_path(event_id: @event.id)%> 
