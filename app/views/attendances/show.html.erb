@@ -1,0 +1,11 @@
+<%=stylesheet_link_tag "users_show.css" %> 
+<h1 class="user_show_title"><%=current_user.email%>'s attended events</h1>
+<div class="users_show_container">
+    <%current_user.attendances.each do |atnd|%>
+        <div class="event_box">
+            <div class="event_name"><h2><%=atnd.event.name%></h2></div>
+            <div class="event_location"><h4><%=atnd.event.location%></h4></div>
+            <div class="event_date"><h5><%=atnd.event.date%></h5></div>
+        </div>
+    <% end %>
+</div>

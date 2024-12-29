@@ -14,7 +14,8 @@
             <div class="new_post"><%=link_to 'Create an Event', new_event_path%></div>
 
             <%# list all the events for the logged in user %>
-            <%=link_to 'Your events', user_path(current_user.id)%>
+            <%=link_to 'Created Events', user_path(current_user.id)%>
+            <%=link_to "Attended Events",attendance_path(current_user.id)%>  
         <%else%>
 
 

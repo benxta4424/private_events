@@ -1,5 +1,5 @@
 <%=stylesheet_link_tag "users_show.css" %> 
-<h1 class="user_show_title"><%=current_user.email%>'s events</h1>
+<h1 class="user_show_title"><%=current_user.email%>'s created events</h1>
 <div class="users_show_container">
     <%current_user.events.each do |event|%>
         <div class="event_box">
