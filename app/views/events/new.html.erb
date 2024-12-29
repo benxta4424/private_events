@@ -3,7 +3,7 @@
 <%=form_with model: @event do |event_part|%>
     <div class="event_date">
         <%=event_part.label :date%>
-        <%=event_part.text_field :date%>
+        <%=event_part.date_field :date%>
     </div>
 
     <div class="event_name">

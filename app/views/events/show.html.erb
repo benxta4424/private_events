@@ -4,10 +4,17 @@
 <h5>Event date:<%=@event.date%></h5>
 <h6>Atendees:
     <ul>
-        <li>Robert</li>
-        <li>Andrei</li>
-        <li>Emanuel</li>
+        <% @event.attendees.each do |atnd| %>
+            <li><%= atnd.email %></li>
+        <% end %>
     </ul>
 </h6>
 
-<%= link_to "Attend This Event",new_attendance_path(event_id: @event.id)%> 
+<%# if you're the host you don't have the option to join the event %>
+<% unless current_user.email == @event.creator.email %>
+    <%= form_with model: Attendance.new , url:attendances_path,method: :post do |form| %>
+        <%= form.hidden_field :event_id, value: @event.id %>
+        <%= form.hidden_field :user_id, value: current_user.id%>
+        <%= form.submit "Join Event"%>
+    <% end %>
+<% end %>

@@ -3,17 +3,18 @@ class AttendancesController < ApplicationController
         @attendee=Attendance.new
     end
     def create
-        @attendee = current_user.attendances.build(event_id: params[attendance_params])
+        @attendee = current_user.attendances.build(attendance_params)
         if @attendee.save
-            flash.now[:alert] = "You've successfully attended the event!"
-            redirect_to @attendee.event
+            flash[:notice] = "You've successfully attended the event!"
+            redirect_to root_path
         else
-            flash.now[:alert] = "You've failed to sign up for this event!"
+            flash[:alert] = "You've failed to sign up for this event!"
+            redirect_to root_path
         end
     end
 
   private
   def attendance_params
-      params.require(:attendance).permit(:event_id)
+      params.require(:attendance).permit(:event_id, :user_id)
   end
 end
