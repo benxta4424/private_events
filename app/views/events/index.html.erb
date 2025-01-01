@@ -3,9 +3,7 @@
 <div class="container">
 
     <div class="page_title">Welcome! Choose an event of your liking or create one!</div>
-
     <div class="logging_the_user">
-
 
         <%# if the user is logged in he/she can create events and attend events %>
     <%if user_signed_in?%>
@@ -18,7 +16,6 @@
             <%=link_to "Attended Events",attendance_path(current_user.id)%>  
         <%else%>
 
-
         <%# if the user is not logged in,he/she can either log in or sign up%>
             <div class="signin"><%= link_to 'Sign Up', new_user_registration_path %></div>
             <div class="login"><%=link_to 'Log IN', new_user_session_path%></div>
@@ -26,18 +23,23 @@
     </div>
 
     <div class="all_events">
-        <% @events.each do |event| %>
-            <div class="event_box">
-                <div class="event_name"><h2>Description:<%=event.name%></h2></div>
-                <div class="event_location"><h4>Location:<%=event.location%></h4></div>
-                <div class="event_date"><h5>Date:<%=event.date%></h5></div>
-                
-                <%# if the user is signed in,he/she can attend an event %>
-                <% if user_signed_in?%>
-                    <div class="attend_event"><%=link_to 'Check Event',event_path(event)%></div>
-                <%end%> 
+        <ul>
+            <div class="box_title">
+                <h3>Future Events:</h3>
             </div>
-        <%end%>
-    </div>
+            <div class="future_events">
+                <%=render 'futurevents'%>
+            </div>
 
+
+                <%# past events %>
+            <div class="box_title">
+                <h3>Past events:</h3>
+            </div>
+            <div class="past_events">
+                
+                <%= render 'pastevents'%> 
+            </div>      
+        </ul>
+    </div>
 </div>

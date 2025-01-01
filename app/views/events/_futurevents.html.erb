@@ -1,0 +1,9 @@
+<%@events.future.each do |event| %>
+    <div class="future_event_box">
+        <%=render 'displayevents',event:event%>
+
+        <% if user_signed_in?%>
+            <%=render 'checkevents',event:event%>
+        <%end%>   
+    </div>
+<%end%>

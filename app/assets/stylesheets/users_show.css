@@ -3,6 +3,7 @@
     grid-template-columns: repeat(6, 1fr);
     padding: 40px;
     margin-top: 2%;
+    gap: 30px;
 }
 .user_show_title {
     font-size:2rem;

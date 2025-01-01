@@ -4,23 +4,56 @@
     margin-top:2rem;
     text-align: center;
 }
-.event_box {
+.future_event_box {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     padding: 20px;
     max-height: 25vh;
     max-width: 15vw;
     row-gap: 5px;
-    border: 3px solid green;
+    border: 8px inset green;
+    text-align: center;
+    font-size: max(10%, 1.5vh);
+    border-radius: 20px;
+}
+.past_event_box {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 20px;
+    max-height: 25vh;
+    max-width: 15vw;
+    row-gap: 5px;
+    border: 8px outset firebrick;
     text-align: center;
     font-size: max(10%, 1.5vh);
     border-radius: 20px;
 }
 .all_events{
-    display: grid;
+    display: flex;
     gap: 20px;
 
-    grid-template-columns: repeat(6, 1fr);
-    padding: 40px;
+    padding: 20px;
     margin-top: 2%;
+}
+.past_events {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+
+}
+.future_events {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(auto-fill,minmax(100px,1fr));
+    margin-bottom:60px;
+
+    border: 2px solid green;
+
+}
+.box_title {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid red;
 }

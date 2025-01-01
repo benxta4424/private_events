@@ -1,0 +1,10 @@
+<% @events.past.each do |event| %>
+        <div class="past_event_box">
+            <%=render 'displayevents',event:event%>
+            <%# if the user is signed in,he/she can attend an event %>
+            <% if user_signed_in?%>
+                <%=render 'checkevents',event:event%>
+            <%end%> 
+        </div>
+    <%end %>
+</div>
