@@ -49,11 +49,33 @@
     grid-template-rows: repeat(auto-fill,minmax(100px,1fr));
     margin-bottom:60px;
 
-    border: 2px solid green;
 
 }
 .box_title {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid red;
+}
+
+.first_row {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    font-size: 12px;
+    margin-left: 60px;
+}
+.second_row {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    font-size: 12px;
+    margin-left: 60px;
+
+}
+.logged_in {
+    display: flex;
+    margin-left: 40px;
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
